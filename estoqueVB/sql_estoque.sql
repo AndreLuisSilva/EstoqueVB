@@ -18,6 +18,14 @@ nivel_usuario int not null
 
 );
 
-insert into login (usuario, senha, nivel_usuario) values ('admin', '123', 0);
+insert into login (usuario, senha, nivel_usuario) values ('andre', '123', 0);
 
 select * from login;
+
+select * from clientes;
+
+alter table clientes add column email varchar(50);
+
+alter table clientes add column variacao varchar(20);
+
+alter table clientes add column tipo_sanguineo varchar(20);

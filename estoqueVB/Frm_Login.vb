@@ -71,8 +71,8 @@ Public Class Frm_Login
         ProgressBar1.Increment(5)
         If ProgressBar1.Value = ProgressBar1.Maximum Then
                 Timer1.Stop()
-                'MsgBox("Bem Vindo")
-                Frm_Tela_Principal.Show()
+            'MsgBox("Bem Vindo")
+            Frm_Tela_Principal.Show()
             Me.Hide()
         End If
     End Sub
