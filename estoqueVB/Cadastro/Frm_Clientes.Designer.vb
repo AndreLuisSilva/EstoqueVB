@@ -41,7 +41,7 @@ Partial Class Frm_Clientes
         Me.txt_email = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cb_sexo = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.rd_A = New System.Windows.Forms.RadioButton()
         Me.rd_B = New System.Windows.Forms.RadioButton()
@@ -50,6 +50,7 @@ Partial Class Frm_Clientes
         Me.chk_positivo = New System.Windows.Forms.CheckBox()
         Me.chk_negativo = New System.Windows.Forms.CheckBox()
         Me.rd_outro = New System.Windows.Forms.RadioButton()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -72,7 +73,7 @@ Partial Class Frm_Clientes
         Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label2.Location = New System.Drawing.Point(264, 23)
+        Me.Label2.Location = New System.Drawing.Point(301, 21)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(38, 18)
         Me.Label2.TabIndex = 1
@@ -121,22 +122,22 @@ Partial Class Frm_Clientes
         '
         Me.txt_codigo.Location = New System.Drawing.Point(92, 25)
         Me.txt_codigo.Name = "txt_codigo"
-        Me.txt_codigo.Size = New System.Drawing.Size(166, 20)
-        Me.txt_codigo.TabIndex = 5
+        Me.txt_codigo.Size = New System.Drawing.Size(202, 20)
+        Me.txt_codigo.TabIndex = 0
         '
         'txt_nome
         '
         Me.txt_nome.Location = New System.Drawing.Point(91, 62)
         Me.txt_nome.Name = "txt_nome"
         Me.txt_nome.Size = New System.Drawing.Size(396, 20)
-        Me.txt_nome.TabIndex = 6
+        Me.txt_nome.TabIndex = 2
         '
         'txt_cpf
         '
-        Me.txt_cpf.Location = New System.Drawing.Point(302, 24)
+        Me.txt_cpf.Location = New System.Drawing.Point(339, 22)
         Me.txt_cpf.Name = "txt_cpf"
-        Me.txt_cpf.Size = New System.Drawing.Size(186, 20)
-        Me.txt_cpf.TabIndex = 7
+        Me.txt_cpf.Size = New System.Drawing.Size(197, 20)
+        Me.txt_cpf.TabIndex = 1
         '
         'txt_endereco
         '
@@ -144,14 +145,14 @@ Partial Class Frm_Clientes
         Me.txt_endereco.Multiline = True
         Me.txt_endereco.Name = "txt_endereco"
         Me.txt_endereco.Size = New System.Drawing.Size(396, 40)
-        Me.txt_endereco.TabIndex = 8
+        Me.txt_endereco.TabIndex = 4
         '
         'txt_telefone
         '
         Me.txt_telefone.Location = New System.Drawing.Point(91, 199)
         Me.txt_telefone.Name = "txt_telefone"
-        Me.txt_telefone.Size = New System.Drawing.Size(166, 20)
-        Me.txt_telefone.TabIndex = 9
+        Me.txt_telefone.Size = New System.Drawing.Size(193, 20)
+        Me.txt_telefone.TabIndex = 5
         '
         'btn_editar
         '
@@ -165,10 +166,10 @@ Partial Class Frm_Clientes
         Me.btn_editar.ForeColor = System.Drawing.Color.Yellow
         Me.btn_editar.Image = CType(resources.GetObject("btn_editar.Image"), System.Drawing.Image)
         Me.btn_editar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btn_editar.Location = New System.Drawing.Point(116, 291)
+        Me.btn_editar.Location = New System.Drawing.Point(133, 326)
         Me.btn_editar.Name = "btn_editar"
         Me.btn_editar.Size = New System.Drawing.Size(75, 60)
-        Me.btn_editar.TabIndex = 11
+        Me.btn_editar.TabIndex = 15
         Me.btn_editar.Text = "Editar"
         Me.btn_editar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btn_editar.UseVisualStyleBackColor = False
@@ -184,10 +185,10 @@ Partial Class Frm_Clientes
         Me.btn_deletar.ForeColor = System.Drawing.Color.Red
         Me.btn_deletar.Image = CType(resources.GetObject("btn_deletar.Image"), System.Drawing.Image)
         Me.btn_deletar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btn_deletar.Location = New System.Drawing.Point(208, 291)
+        Me.btn_deletar.Location = New System.Drawing.Point(225, 326)
         Me.btn_deletar.Name = "btn_deletar"
         Me.btn_deletar.Size = New System.Drawing.Size(75, 60)
-        Me.btn_deletar.TabIndex = 12
+        Me.btn_deletar.TabIndex = 16
         Me.btn_deletar.Text = "Deletar"
         Me.btn_deletar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btn_deletar.UseVisualStyleBackColor = False
@@ -203,10 +204,10 @@ Partial Class Frm_Clientes
         Me.btn_voltar.ForeColor = System.Drawing.Color.Orange
         Me.btn_voltar.Image = CType(resources.GetObject("btn_voltar.Image"), System.Drawing.Image)
         Me.btn_voltar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btn_voltar.Location = New System.Drawing.Point(399, 291)
+        Me.btn_voltar.Location = New System.Drawing.Point(416, 326)
         Me.btn_voltar.Name = "btn_voltar"
         Me.btn_voltar.Size = New System.Drawing.Size(75, 60)
-        Me.btn_voltar.TabIndex = 13
+        Me.btn_voltar.TabIndex = 18
         Me.btn_voltar.Text = "Voltar"
         Me.btn_voltar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btn_voltar.UseVisualStyleBackColor = False
@@ -223,7 +224,7 @@ Partial Class Frm_Clientes
         Me.btn_salvar.ForeColor = System.Drawing.Color.Lime
         Me.btn_salvar.Image = CType(resources.GetObject("btn_salvar.Image"), System.Drawing.Image)
         Me.btn_salvar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btn_salvar.Location = New System.Drawing.Point(23, 291)
+        Me.btn_salvar.Location = New System.Drawing.Point(40, 326)
         Me.btn_salvar.Name = "btn_salvar"
         Me.btn_salvar.Size = New System.Drawing.Size(75, 60)
         Me.btn_salvar.TabIndex = 14
@@ -242,10 +243,10 @@ Partial Class Frm_Clientes
         Me.btn_limpar.ForeColor = System.Drawing.Color.White
         Me.btn_limpar.Image = CType(resources.GetObject("btn_limpar.Image"), System.Drawing.Image)
         Me.btn_limpar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.btn_limpar.Location = New System.Drawing.Point(307, 291)
+        Me.btn_limpar.Location = New System.Drawing.Point(324, 326)
         Me.btn_limpar.Name = "btn_limpar"
         Me.btn_limpar.Size = New System.Drawing.Size(61, 60)
-        Me.btn_limpar.TabIndex = 15
+        Me.btn_limpar.TabIndex = 17
         Me.btn_limpar.Text = "Limpar"
         Me.btn_limpar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.btn_limpar.UseVisualStyleBackColor = False
@@ -255,7 +256,7 @@ Partial Class Frm_Clientes
         Me.txt_email.Location = New System.Drawing.Point(91, 101)
         Me.txt_email.Name = "txt_email"
         Me.txt_email.Size = New System.Drawing.Size(396, 20)
-        Me.txt_email.TabIndex = 17
+        Me.txt_email.TabIndex = 3
         '
         'Label6
         '
@@ -277,19 +278,19 @@ Partial Class Frm_Clientes
         Me.Label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label7.Location = New System.Drawing.Point(263, 199)
+        Me.Label7.Location = New System.Drawing.Point(296, 201)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(42, 18)
         Me.Label7.TabIndex = 18
         Me.Label7.Text = "Sexo"
         '
-        'ComboBox1
+        'cb_sexo
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(307, 200)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(180, 21)
-        Me.ComboBox1.TabIndex = 19
+        Me.cb_sexo.FormattingEnabled = True
+        Me.cb_sexo.Location = New System.Drawing.Point(344, 198)
+        Me.cb_sexo.Name = "cb_sexo"
+        Me.cb_sexo.Size = New System.Drawing.Size(191, 21)
+        Me.cb_sexo.TabIndex = 6
         '
         'Label8
         '
@@ -298,7 +299,7 @@ Partial Class Frm_Clientes
         Me.Label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label8.Location = New System.Drawing.Point(8, 237)
+        Me.Label8.Location = New System.Drawing.Point(9, 250)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(111, 18)
         Me.Label8.TabIndex = 20
@@ -310,10 +311,10 @@ Partial Class Frm_Clientes
         Me.rd_A.BackColor = System.Drawing.Color.Transparent
         Me.rd_A.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rd_A.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.rd_A.Location = New System.Drawing.Point(125, 239)
+        Me.rd_A.Location = New System.Drawing.Point(126, 252)
         Me.rd_A.Name = "rd_A"
         Me.rd_A.Size = New System.Drawing.Size(35, 20)
-        Me.rd_A.TabIndex = 21
+        Me.rd_A.TabIndex = 7
         Me.rd_A.TabStop = True
         Me.rd_A.Text = "A"
         Me.rd_A.UseVisualStyleBackColor = False
@@ -324,10 +325,10 @@ Partial Class Frm_Clientes
         Me.rd_B.BackColor = System.Drawing.Color.Transparent
         Me.rd_B.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rd_B.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.rd_B.Location = New System.Drawing.Point(181, 239)
+        Me.rd_B.Location = New System.Drawing.Point(182, 252)
         Me.rd_B.Name = "rd_B"
         Me.rd_B.Size = New System.Drawing.Size(35, 20)
-        Me.rd_B.TabIndex = 22
+        Me.rd_B.TabIndex = 8
         Me.rd_B.TabStop = True
         Me.rd_B.Text = "B"
         Me.rd_B.UseVisualStyleBackColor = False
@@ -338,10 +339,10 @@ Partial Class Frm_Clientes
         Me.rd_AB.BackColor = System.Drawing.Color.Transparent
         Me.rd_AB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rd_AB.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.rd_AB.Location = New System.Drawing.Point(239, 240)
+        Me.rd_AB.Location = New System.Drawing.Point(240, 253)
         Me.rd_AB.Name = "rd_AB"
         Me.rd_AB.Size = New System.Drawing.Size(44, 20)
-        Me.rd_AB.TabIndex = 23
+        Me.rd_AB.TabIndex = 9
         Me.rd_AB.TabStop = True
         Me.rd_AB.Text = "AB"
         Me.rd_AB.UseVisualStyleBackColor = False
@@ -352,10 +353,10 @@ Partial Class Frm_Clientes
         Me.rd_O.BackColor = System.Drawing.Color.Transparent
         Me.rd_O.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rd_O.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.rd_O.Location = New System.Drawing.Point(301, 240)
+        Me.rd_O.Location = New System.Drawing.Point(302, 253)
         Me.rd_O.Name = "rd_O"
         Me.rd_O.Size = New System.Drawing.Size(36, 20)
-        Me.rd_O.TabIndex = 24
+        Me.rd_O.TabIndex = 10
         Me.rd_O.TabStop = True
         Me.rd_O.Text = "O"
         Me.rd_O.UseVisualStyleBackColor = False
@@ -366,10 +367,10 @@ Partial Class Frm_Clientes
         Me.chk_positivo.BackColor = System.Drawing.Color.Transparent
         Me.chk_positivo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chk_positivo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.chk_positivo.Location = New System.Drawing.Point(418, 231)
+        Me.chk_positivo.Location = New System.Drawing.Point(419, 244)
         Me.chk_positivo.Name = "chk_positivo"
         Me.chk_positivo.Size = New System.Drawing.Size(75, 20)
-        Me.chk_positivo.TabIndex = 25
+        Me.chk_positivo.TabIndex = 12
         Me.chk_positivo.Text = "Positivo"
         Me.chk_positivo.UseVisualStyleBackColor = False
         '
@@ -379,10 +380,10 @@ Partial Class Frm_Clientes
         Me.chk_negativo.BackColor = System.Drawing.Color.Transparent
         Me.chk_negativo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.chk_negativo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.chk_negativo.Location = New System.Drawing.Point(418, 254)
+        Me.chk_negativo.Location = New System.Drawing.Point(419, 267)
         Me.chk_negativo.Name = "chk_negativo"
         Me.chk_negativo.Size = New System.Drawing.Size(82, 20)
-        Me.chk_negativo.TabIndex = 26
+        Me.chk_negativo.TabIndex = 13
         Me.chk_negativo.Text = "Negativo"
         Me.chk_negativo.UseVisualStyleBackColor = False
         '
@@ -392,20 +393,32 @@ Partial Class Frm_Clientes
         Me.rd_outro.BackColor = System.Drawing.Color.Transparent
         Me.rd_outro.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rd_outro.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.rd_outro.Location = New System.Drawing.Point(352, 240)
+        Me.rd_outro.Location = New System.Drawing.Point(353, 253)
         Me.rd_outro.Name = "rd_outro"
         Me.rd_outro.Size = New System.Drawing.Size(58, 20)
-        Me.rd_outro.TabIndex = 27
+        Me.rd_outro.TabIndex = 11
         Me.rd_outro.TabStop = True
         Me.rd_outro.Text = "Outro"
         Me.rd_outro.UseVisualStyleBackColor = False
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label9.Location = New System.Drawing.Point(28, 297)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(0, 16)
+        Me.Label9.TabIndex = 21
         '
         'Frm_Clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(510, 353)
+        Me.ClientSize = New System.Drawing.Size(550, 398)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.rd_outro)
         Me.Controls.Add(Me.chk_negativo)
         Me.Controls.Add(Me.chk_positivo)
@@ -414,7 +427,7 @@ Partial Class Frm_Clientes
         Me.Controls.Add(Me.rd_B)
         Me.Controls.Add(Me.rd_A)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cb_sexo)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.txt_email)
         Me.Controls.Add(Me.Label6)
@@ -459,7 +472,7 @@ Partial Class Frm_Clientes
     Friend WithEvents txt_email As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cb_sexo As ComboBox
     Friend WithEvents Label8 As Label
     Friend WithEvents rd_A As RadioButton
     Friend WithEvents rd_B As RadioButton
@@ -468,4 +481,5 @@ Partial Class Frm_Clientes
     Friend WithEvents chk_positivo As CheckBox
     Friend WithEvents chk_negativo As CheckBox
     Friend WithEvents rd_outro As RadioButton
+    Friend WithEvents Label9 As Label
 End Class
